@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://cyberdimension.com.br/sitemap.xml
+
+Host: cyberdimension.com.br

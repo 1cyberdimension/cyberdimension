@@ -1,0 +1,840 @@
+/* =========================================
+   CYBERDIMENSION
+   ========================================= */
+
+:root{
+
+    --bg-primary:#05010A;
+    --bg-secondary:#000000;
+
+    --text-primary:#FFFFFF;
+    --text-secondary:#D0D0D0;
+
+    --accent-primary:#A020F0;
+    --accent-secondary:#C770FF;
+
+    --shadow-neon:
+        0 0 15px rgba(160,32,240,.5),
+        0 0 30px rgba(160,32,240,.3);
+
+}
+
+/* =========================================
+   RESET
+   ========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--bg-primary);
+    color:var(--text-primary);
+
+    font-family:'Roboto', sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/* =========================================
+   ELEMENTOS GLOBAIS
+   ========================================= */
+
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header{
+
+    background:#000;
+
+    border-bottom:2px solid var(--accent-primary);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:10px 10px;
+
+    position:sticky;
+    top:0;
+    z-index:9999;
+
+}
+
+.logo{
+
+    font-size:28px;
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+nav ul{
+
+    display:flex;
+    gap:30px;
+
+}
+
+nav a{
+
+    color:#fff;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--accent-secondary);
+
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero{
+
+    width:100%;
+
+}
+
+.hero img{
+
+    width:100%;
+
+}
+
+/* =========================================
+   VIDEO
+   ========================================= */
+
+.video-section{
+
+    width:95%;
+
+    max-width:1800px;
+
+    margin:50px auto;
+
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    aspect-ratio:16 / 9;
+
+    border:2px solid var(--accent-primary);
+
+    box-shadow:var(--shadow-neon);
+
+}
+
+/* =========================================
+   ÁREAS DE ATUAÇÃO
+   ========================================= */
+
+/* =========================================
+   ÁREAS DE ATUAÇÃO
+   ========================================= */
+
+.areas-section{
+    width:95%;
+    max-width:1800px;
+    margin:50px auto;
+}
+
+.areas-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:12px;
+}
+
+.area-card{
+    background:#000;
+    border:1px solid var(--accent-primary);
+    padding:30px 25px;
+    text-align:center;
+    min-height:320px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    box-shadow:var(--shadow-neon);
+    transition:.3s;
+
+    min-width:0;
+}
+
+.area-card:hover{
+    transform:translateY(-5px);
+}
+
+.area-icon{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    margin-bottom:25px;
+
+}
+
+.area-icon img{
+
+    width:90px;
+
+    height:90px;
+
+    display:block;
+
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(21%)
+        sepia(97%)
+        saturate(3875%)
+        hue-rotate(268deg)
+        brightness(110%)
+        contrast(110%);
+
+}
+
+.area-card h3{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+.area-card p{
+
+    color:var(--text-secondary);
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+/* =========================================
+   RESPONSIVIDADE DOS CARDS
+   ========================================= */
+
+@media (max-width:1200px){
+
+    .areas-grid{
+        grid-template-columns:repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width:600px){
+
+    .areas-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .area-card{
+        min-height:auto;
+        padding:20px 16px;
+    }
+
+    .area-icon{
+        font-size:46px;
+    }
+
+    .area-card h3{
+        font-size:1.35rem;
+    }
+
+    .area-card p{
+        font-size:0.92rem;
+    }
+
+}
+
+/* =========================================
+   CABEÇALHO ÁREAS DE ATUAÇÃO
+   ========================================= */
+
+.areas-header{
+    width:95%;
+    max-width:1800px;
+    margin:50px auto 20px;
+}
+
+/* =========================================
+   CONECTE-SE COM A CYBERDIMENSION
+   ========================================= */
+
+.social-section{
+
+    width:95%;
+    max-width:1800px;
+
+    margin:50px auto;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.section-title h2{
+
+    font-size:2.4rem;
+
+    margin-bottom:15px;
+
+}
+
+.section-title p{
+
+    color:var(--text-secondary);
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+}
+
+.social-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:20px;
+
+}
+
+.social-card{
+
+    background:#000;
+
+    border:1px solid var(--accent-primary);
+
+    box-shadow:var(--shadow-neon);
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:400px;
+
+    transition:.3s;
+
+}
+
+.social-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.social-icon{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    margin-bottom:30px;
+
+}
+
+.social-icon img{
+
+    width:95px;
+
+    height:95px;
+
+    display:block;
+
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(21%)
+        sepia(97%)
+        saturate(3875%)
+        hue-rotate(268deg)
+        brightness(110%)
+        contrast(110%);
+
+}
+
+.social-card h3{
+
+    font-size:2rem;
+
+    margin-top:10px;
+
+    margin-bottom:25px;
+
+}
+
+.social-card p{
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+    margin-bottom:30px;
+
+}
+
+.social-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:60px;
+
+    width:100%;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        90deg,
+        var(--accent-primary),
+        var(--accent-secondary)
+    );
+
+    color:#fff;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.social-button:hover{
+
+    box-shadow:var(--shadow-neon);
+
+    transform:translateY(-2px);
+
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer{
+
+    margin-top:0;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(160,32,240,.3);
+
+    background:#000;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:30px;
+
+}
+
+.footer-links a{
+
+    color:var(--accent-secondary);
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#fff;
+
+}
+
+.footer-copy{
+
+    font-size:18px;
+
+    color:#fff;
+
+    margin-bottom:40px;
+
+}
+
+.footer-support a{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--accent-primary);
+
+    transition:.3s;
+
+}
+
+.footer-support a:hover{
+
+    color:#fff;
+
+    text-shadow:
+        0 0 10px var(--accent-primary),
+        0 0 20px var(--accent-primary);
+
+}
+
+/* =========================================
+   VOLTAR AO TOPO
+   ========================================= */
+
+.back-to-top{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:35px;
+
+    height:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#000;
+
+    border:2px solid var(--accent-primary);
+
+    color:var(--accent-primary);
+
+    font-size:20px;
+
+    border-radius:8px;
+
+    box-shadow:var(--shadow-neon);
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+.back-to-top:hover{
+
+    transform:translateY(-4px);
+
+    background:var(--accent-primary);
+
+    color:#fff;
+
+}
+
+/* =========================================
+   TABLETS
+   ========================================= */
+
+@media (max-width:900px){
+
+    .areas-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* =========================================
+   SOCIAL RESPONSIVO
+   ========================================= */
+
+@media (max-width:900px){
+
+    .social-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .social-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .social-card{
+
+        min-height:auto;
+
+        padding:30px 20px;
+
+    }
+
+    .social-icon{
+
+        font-size:60px;
+
+    }
+
+    .social-card h3{
+
+        font-size:1.8rem;
+
+    }
+
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width:768px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:15px;
+
+    }
+
+    .logo{
+
+        font-size:22px;
+
+        text-align:center;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    nav a{
+
+        font-size:14px;
+
+    }
+
+    .areas-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .area-card{
+
+        min-height:auto;
+
+        padding:30px 20px;
+
+    }
+
+    .area-icon{
+
+        font-size:55px;
+
+    }
+
+    .area-card h3{
+
+        font-size:1.7rem;
+
+    }
+
+    .area-card p{
+
+        font-size:1rem;
+
+    }
+
+}
+
+/* =========================================
+   CELULARES PEQUENOS
+   ========================================= */
+
+@media (max-width:480px){
+
+    .logo{
+
+        font-size:20px;
+
+    }
+
+    nav ul{
+
+        gap:10px;
+
+    }
+
+    nav a{
+
+        font-size:13px;
+
+    }
+
+}
+
+/* =========================================
+   EVENTOS
+   ========================================= */
+
+@media (max-width:900px){
+
+    .eventos-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media (max-width:600px){
+
+    .eventos-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* Cards de eventos */
+
+.evento-card{
+    display:block;
+    overflow:hidden;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.evento-card img{
+    width:100%;
+    display:block;
+    border-radius:12px;
+    border:1px solid #A020F0;
+    box-shadow:0 0 15px rgba(160,32,240,.4);
+    transition:all .35s ease;
+}
+
+.evento-card:hover img{
+    transform:scale(1.05) translateY(-4px);;
+    box-shadow:
+        0 0 20px rgba(160,32,240,.6),
+        0 0 40px rgba(160,32,240,.3);
+}
+
+/* Banner Campeonato */
+
+.banner-campeonato{
+    display:block;
+    overflow:hidden;
+    border-radius:16px;
+}
+
+.banner-campeonato img{
+    width:100%;
+    display:block;
+    transition:all .35s ease;
+    cursor:pointer;
+}
+
+.banner-campeonato:hover img{
+    transform:translateY(-6px) scale(1.02);
+    box-shadow:
+        0 0 20px rgba(160,32,240,.6),
+        0 0 40px rgba(160,32,240,.3);
+}
+
+.banner-campeonato:active img{
+    transform:translateY(-2px) scale(.98);
+}
+
+

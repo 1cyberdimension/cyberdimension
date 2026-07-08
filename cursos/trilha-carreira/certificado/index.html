@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Certificado | CYBERDIMENSION</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#000;
+overflow:auto;
+padding:20px;
+
+}
+
+.certificado{
+
+position:relative;
+
+width:1920px;
+height:1080px;
+
+margin:auto;
+
+overflow:hidden;
+
+}
+
+.template{
+
+width:100%;
+height:100%;
+
+display:block;
+
+}
+
+.nomeAluno{
+
+position:absolute;
+
+top:370px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:1500px;
+
+text-align:center;
+
+font-family:'Great Vibes', cursive;
+
+font-size:72px;
+
+font-weight:400;
+
+color:#FFFFFF;
+
+white-space:nowrap;
+
+overflow:hidden;
+
+text-overflow:ellipsis;
+
+}
+
+
+
+
+.areaAluno{
+
+position:absolute;
+
+top:855px;
+
+left:235px;
+
+width:520px;
+
+text-align:center;
+
+font-size:24px;
+
+font-weight:700;
+
+color:#FFFFFF;
+
+line-height:1.4;
+
+}
+
+
+
+.dataAluno{
+
+position:absolute;
+
+top:825px;
+
+right:405px;
+
+width:320px;
+
+text-align:center;
+
+font-size:24px;
+
+font-weight:700;
+
+color:#FFFFFF;
+
+}
+
+.download{
+
+position:fixed;
+
+bottom:30px;
+
+right:30px;
+
+background:#A020F0;
+
+color:#fff;
+
+border:none;
+
+padding:15px 25px;
+
+font-size:1rem;
+
+font-weight:700;
+
+border-radius:10px;
+
+cursor:pointer;
+
+z-index:9999;
+
+}
+
+.nomeAluno,
+.areaAluno,
+.dataAluno{
+
+user-select:none;
+
+}
+
+@media print {
+
+.download{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="certificado">
+
+<img
+src="../../../img/certificado-template.webp"
+alt="Certificado"
+class="template">
+
+<div
+id="nomeAluno"
+class="nomeAluno">
+</div>
+
+<div
+id="areaAluno"
+class="areaAluno">
+</div>
+
+<div
+id="dataAluno"
+class="dataAluno">
+</div>
+
+</div>
+
+<button
+class="download"
+onclick="baixarCertificado();">
+
+📜 Salvar Certificado
+
+</button>
+
+<script>
+
+const nome =
+localStorage.getItem(
+"certificadoNome"
+);
+
+const area =
+localStorage.getItem(
+"certificadoArea"
+);
+
+const nomeAluno =
+document.getElementById("nomeAluno");
+
+nomeAluno.innerText =
+nome || "PARTICIPANTE";
+
+let tamanhoFonte = 92;
+
+while(
+nomeAluno.scrollWidth >
+nomeAluno.clientWidth &&
+tamanhoFonte > 40
+){
+
+tamanhoFonte--;
+
+nomeAluno.style.fontSize =
+tamanhoFonte + "px";
+
+}
+
+document.getElementById(
+"areaAluno"
+).innerText =
+area || "NÃO INFORMADA";
+
+const hoje = new Date();
+
+document.getElementById("dataAluno").innerText =
+hoje.toLocaleDateString(
+"pt-BR",
+{
+day:"2-digit",
+month:"long",
+year:"numeric"
+}
+);
+
+function baixarCertificado(){
+
+const certificado =
+document.querySelector(".certificado");
+
+html2canvas(certificado,{
+scale:2,
+useCORS:true
+}).then(canvas=>{
+
+const link =
+document.createElement("a");
+
+link.download =
+`certificado-${nome}.webp`;
+
+link.href =
+canvas.toDataURL(
+"image/webp",
+1.0
+);
+
+link.click();
+
+});
+
+}
+
+</script>
+
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</body>
+</html>
