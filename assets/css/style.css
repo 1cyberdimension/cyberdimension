@@ -837,4 +837,15 @@ footer{
     transform:translateY(-2px) scale(.98);
 }
 
+.linkedin-share{
+    margin-top:40px;
+    text-align:center;
+    font-size:1.1rem;
+    color:#d9d9d9;
+    line-height:1.8;
+}
 
+.linkedin-share strong{
+    color:#b44cff;
+    font-weight:700;
+}
