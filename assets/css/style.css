@@ -775,6 +775,54 @@ footer{
 
 }
 
+main{
+
+    padding:35px 5% !important;
+
+}
+
+main section:first-child{
+
+    margin-bottom:40px !important;
+
+}
+
+main section:first-child h1{
+
+    font-size:2rem !important;
+
+    line-height:1.2;
+
+    margin-bottom:20px !important;
+
+}
+
+main section:first-child p{
+
+    font-size:1rem !important;
+
+    line-height:1.8 !important;
+
+}
+
+.eventos-main{
+    padding:35px 5%;
+}
+
+.eventos-topo{
+    margin-bottom:40px;
+}
+
+.eventos-titulo{
+    font-size:2rem;
+    line-height:1.2;
+}
+
+.eventos-descricao{
+    font-size:1rem;
+    line-height:1.8;
+}
+
 /* =========================================
    EVENTOS
    ========================================= */
@@ -826,6 +874,31 @@ footer{
     box-shadow:
         0 0 20px rgba(160,32,240,.6),
         0 0 40px rgba(160,32,240,.3);
+}
+
+.eventos-main{
+    padding:50px 2%;
+    max-width:1900px;
+    margin:auto;
+}
+
+.eventos-topo{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.eventos-titulo{
+    font-size:3rem;
+    margin-bottom:25px;
+    color:#FFF;
+}
+
+.eventos-descricao{
+    max-width:1200px;
+    margin:auto;
+    color:#D0D0D0;
+    line-height:2;
+    font-size:1.15rem;
 }
 
 /* Banner Campeonato */
