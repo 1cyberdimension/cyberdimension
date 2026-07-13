@@ -919,3 +919,40 @@ footer{
     }
 
 }
+
+/* ==========================
+   CURSOS MOBILE
+========================== */
+
+@media (max-width:768px){
+
+    .courses-grid{
+        grid-template-columns:1fr !important;
+        gap:25px !important;
+    }
+
+    .course-card{
+        width:100%;
+    }
+
+    .course-card .social-button{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+
+    min-height:58px;
+
+    padding:16px 24px;
+
+    font-size:1.15rem;
+
+    border-radius:14px;
+
+    box-sizing:border-box;
+
+}
+
+}
