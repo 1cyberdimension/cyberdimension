@@ -97,54 +97,7 @@ border-radius:12px;
 
 }
 
-/* ===== PROGRESSO ===== */
 
-.progress-card{
-
-max-width:1200px;
-
-margin:40px auto;
-
-padding:25px;
-
-background:#080808;
-
-border:1px solid #A020F0;
-
-border-radius:16px;
-
-}
-
-.progress-bar{
-
-height:18px;
-
-background:#111;
-
-border-radius:999px;
-
-overflow:hidden;
-
-margin-top:15px;
-
-}
-
-.progress-fill{
-
-height:100%;
-
-width:0%;
-
-background:
-linear-gradient(
-90deg,
-#A020F0,
-#C770FF
-);
-
-transition:.5s;
-
-}
 
 /* ===== MODULOS ===== */
 
@@ -1415,28 +1368,7 @@ cibersegurança.
 
 </section>
 
-<section class="progress-card">
 
-<h3>
-Progresso do Curso
-</h3>
-
-<div class="progress-bar">
-
-<div
-class="progress-fill"
-id="progressFill">
-</div>
-
-</div>
-
-<p id="progressText">
-
-0% concluído
-
-</p>
-
-</section>
 
 <section class="module" id="modulo1">
 
@@ -19279,27 +19211,7 @@ Compartilhe no LinkedIn e nos marque <strong>@CYBERDIMENSION</strong>
 
 <script>
 
-/* ======================================================
-SISTEMA DE PROGRESSO DO CURSO
-====================================================== */
 
-let progressoGlobal = {
-  concluidos: 0,
-  total: 82 // 10 módulos com média de 8 elementos cada (quizzes + games)
-};
-
-function atualizarProgresso() {
-  const percentual = Math.round((progressoGlobal.concluidos / progressoGlobal.total) * 100);
-  document.getElementById("progressFill").style.width = percentual + "%";
-  document.getElementById("progressText").innerHTML = percentual + "% concluído";
-}
-
-function marcarComoConcluido() {
-  if (progressoGlobal.concluidos < progressoGlobal.total) {
-    progressoGlobal.concluidos++;
-    atualizarProgresso();
-  }
-}
 
 /* ======================================================
 SOC ANALYST SIMULATOR
@@ -19553,7 +19465,7 @@ document.getElementById("socFinal");
 
 document.getElementById("socNext").style.display = "none";
 
-marcarComoConcluido();
+
 
 final.style.display = "block";
 final.className = "quiz-result quiz-correct";
@@ -20009,7 +19921,7 @@ final.style.display =
 
 if(pontosCloud >= 70){
 
-marcarComoConcluido();
+function marcarComoConcluido(){ }
 
 final.className =
 "quiz-result quiz-correct";
@@ -20288,7 +20200,7 @@ result.innerHTML =
 
 "✅ Excelente! Você compreendeu os conceitos fundamentais da cibersegurança e os três pilares da Tríade CIA.";
 
-marcarComoConcluido();
+function marcarComoConcluido(){ }
 
 document.getElementById(
 "nextModule1"
@@ -20347,7 +20259,7 @@ result.innerHTML =
 
 "✅ Correto! A cibersegurança tornou-se essencial porque dependemos cada vez mais de sistemas digitais, serviços online e informações conectadas.";
 
-marcarComoConcluido();
+function marcarComoConcluido(){ }
 
 }
 else{
@@ -20381,7 +20293,7 @@ result.innerHTML =
 
 "✅ Correto! Cibersegurança é o conjunto de práticas, tecnologias e processos utilizados para proteger sistemas, redes, dispositivos e informações.";
 
-marcarComoConcluido();
+function marcarComoConcluido(){ }
 
 }
 else{
@@ -20862,7 +20774,7 @@ result.innerHTML =
 
 "✅ Excelente! Você demonstrou compreender como diferentes ameaças podem atuar em conjunto durante um incidente real de segurança.";
 
-marcarComoConcluido();
+function marcarComoConcluido(){ }
 
 document.getElementById(
 "nextModule2"
@@ -21206,7 +21118,7 @@ result.innerHTML =
 
 "✅ Excelente! Você compreendeu os principais conceitos de redes, protocolos e comunicação na internet.";
 
-marcarComoConcluido();
+function marcarComoConcluido(){ }
 
 document.getElementById(
 "nextModule3"
@@ -21550,7 +21462,7 @@ result.innerHTML =
 
 "✅ Excelente! Você compreendeu os principais conceitos relacionados a sistemas operacionais, permissões, monitoramento, atualizações e Hardening.";
 
-marcarComoConcluido();
+function marcarComoConcluido(){ }
 
 document.getElementById(
 "nextModule4"
@@ -21896,7 +21808,7 @@ result.innerHTML =
 
 "✅ Excelente! Você concluiu o Módulo 5 e compreendeu os principais conceitos relacionados ao Linux e sua importância para a cibersegurança.";
 
-marcarComoConcluido();
+function marcarComoConcluido(){ }
 
 document.getElementById(
 "nextModule5"
@@ -22251,7 +22163,7 @@ botao.style.background =
 
 if(vulnerabilidadesEncontradas === 4){
 
-marcarComoConcluido();
+function marcarComoConcluido(){ }
 
 document.getElementById(
 "gameScore"
@@ -22624,7 +22536,7 @@ botao.style.background =
 
 if(vulnerabilidadesWebEncontradas === 4){
 
-marcarComoConcluido();
+function marcarComoConcluido(){ }
 
 document.getElementById(
 "gameScore7"
@@ -23061,7 +22973,7 @@ pontosModulo8 +
 
 " / 100";
 
-marcarComoConcluido();
+function marcarComoConcluido(){ }
 
 document.getElementById(
 "game8Question"
