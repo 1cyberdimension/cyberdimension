@@ -1,0 +1,22 @@
+{
+    "name": "CYBERDIMENSION",
+    "short_name": "CYBERDIMENSION",
+    "description": "Comunidade e ONG de Cibersegurança",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#05010A",
+    "theme_color": "#05010A",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "favicon.webp",
+            "sizes": "192x192",
+            "type": "image/webp"
+        },
+        {
+            "src": "favicon.webp",
+            "sizes": "512x512",
+            "type": "image/webp"
+        }
+    ]
+}

@@ -62,4 +62,16 @@
 <loc>https://cyberdimension.com.br/apoiar/</loc>
 </url>
 
+<url>
+    <loc>https://cyberdimension.com.br/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+</url>
+
+<url>
+    <loc>https://cyberdimension.com.br/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+</url>
+
 </urlset>
