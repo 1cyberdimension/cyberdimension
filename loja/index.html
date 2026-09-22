@@ -8,25 +8,335 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="refresh"
-          content="0; url=https://cyberdimension.lojavirtualnuvem.com.br">
+    <meta name="theme-color"
+          content="#000000">
 
-    <title>Loja CYBERDIMENSION</title>
+    <title>Loja | CYBERDIMENSION</title>
+
+    <meta name="description"
+          content="Acesse a Loja Oficial CYBERDIMENSION.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(62, 0, 158, 0.20),
+                    rgba(0, 0, 0, 0.98) 65%
+                );
+
+            background-color: #000;
+
+            color: #fff;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 100vh;
+
+            overflow: hidden;
+
+        }
+
+        .container {
+
+            width: 90%;
+
+            max-width: 700px;
+
+            text-align: center;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+        .logo {
+
+            font-size: clamp(2rem, 7vw, 4rem);
+
+            font-weight: 900;
+
+            letter-spacing: 3px;
+
+            color: #ffffff;
+
+            text-shadow:
+                0 0 5px #ffffff,
+                0 0 15px #7a00ff,
+                0 0 30px #3e009e;
+
+            margin-bottom: 35px;
+
+        }
+
+        .line {
+
+            width: 180px;
+
+            height: 3px;
+
+            background: #7a00ff;
+
+            margin: 0 auto 35px;
+
+            box-shadow:
+                0 0 10px #7a00ff,
+                0 0 25px #3e009e;
+
+        }
+
+        h1 {
+
+            font-size: clamp(1.8rem, 5vw, 3rem);
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .subtitle {
+
+            color: #cfcfcf;
+
+            font-size: clamp(1rem, 3vw, 1.25rem);
+
+            margin-bottom: 40px;
+
+        }
+
+        .loader {
+
+            width: 70px;
+
+            height: 70px;
+
+            margin: 0 auto 35px;
+
+            border-radius: 50%;
+
+            border: 4px solid rgba(255,255,255,0.10);
+
+            border-top-color: #8b00ff;
+
+            border-right-color: #3e009e;
+
+            animation:
+                spin 1s linear infinite;
+
+            box-shadow:
+                0 0 15px rgba(122,0,255,0.5);
+
+        }
+
+        @keyframes spin {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        .button {
+
+            display: inline-block;
+
+            padding: 15px 35px;
+
+            border: 1px solid #8b00ff;
+
+            border-radius: 8px;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 1rem;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            background:
+                rgba(62, 0, 158, 0.25);
+
+            box-shadow:
+                0 0 10px rgba(122,0,255,0.35);
+
+            transition:
+                0.3s ease;
+
+        }
+
+        .button:hover {
+
+            background: #3e009e;
+
+            box-shadow:
+                0 0 15px #7a00ff,
+                0 0 35px rgba(62,0,158,0.8);
+
+            transform: translateY(-2px);
+
+        }
+
+        .footer {
+
+            margin-top: 45px;
+
+            color: #666;
+
+            font-size: 0.85rem;
+
+        }
+
+        .glow {
+
+            position: fixed;
+
+            width: 350px;
+
+            height: 350px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(62, 0, 158, 0.12);
+
+            filter: blur(80px);
+
+            z-index: 0;
+
+        }
+
+        .glow.one {
+
+            top: -150px;
+
+            left: -150px;
+
+        }
+
+        .glow.two {
+
+            bottom: -150px;
+
+            right: -150px;
+
+        }
+
+        @media (max-width: 600px) {
+
+            .logo {
+
+                letter-spacing: 2px;
+
+            }
+
+            .line {
+
+                width: 120px;
+
+            }
+
+            .loader {
+
+                width: 60px;
+
+                height: 60px;
+
+            }
+
+            .button {
+
+                width: 90%;
+
+                max-width: 300px;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-    <p>
-        Redirecionando para a Loja CYBERDIMENSION...
-    </p>
+    <div class="glow one"></div>
+    <div class="glow two"></div>
 
-    <p>
-        Se você não for redirecionado automaticamente,
-        <a href="https://cyberdimension.lojavirtualnuvem.com.br">
-            clique aqui para acessar a loja.
+    <main class="container">
+
+        <div class="logo">
+            CYBERDIMENSION
+        </div>
+
+        <div class="line"></div>
+
+        <h1>
+            LOJA OFICIAL
+        </h1>
+
+        <p class="subtitle">
+            Prepare-se. Você está sendo direcionado para nossa loja.
+        </p>
+
+        <div class="loader"></div>
+
+        <a
+            class="button"
+            href="https://cyberdimension.lojavirtualnuvem.com.br"
+        >
+            ACESSAR LOJA
         </a>
-    </p>
+
+        <p class="footer">
+            CYBERDIMENSION © 2026
+        </p>
+
+    </main>
+
+    <script>
+
+        setTimeout(function() {
+
+            window.location.href =
+                "https://cyberdimension.lojavirtualnuvem.com.br";
+
+        }, 2000);
+
+    </script>
 
 </body>
 
